@@ -1,0 +1,11 @@
+database:
+    url: "localhost:5432/Versus"
+    user: "user"
+    password: "password"
+    default_rating: 1200
+rating:
+    k_factor: 17.0
+    streak_max: 10.0
+leaderboard:
+    size: 10
+    cache_update_frequency: 60

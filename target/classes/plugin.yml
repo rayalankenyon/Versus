@@ -1,0 +1,30 @@
+name: Versus
+version: 0.9
+main: io.rayalan.versus.Versus
+
+commands:
+    versus:
+        description: View your Versus statistics
+        aliases: [v]
+        permission: versus.versus
+        usage: /<command> - View your Versus statistics
+    versustop:
+        description: View Versus leaderboard
+        aliases: [vtop]
+        permission: versus.top
+        usage: /<command> - View Versus leaderboard
+    versusremove:
+        description: Remove an online player's data from the Versus database
+        aliases: [vremove, vrm]
+        permission: versus.remove
+        usage: /<command> [player] - Remove an online player's data from the Versus database
+        
+permissions:
+    versus.versus:
+        default: true
+    versus.top:
+        children:
+            versus.versus: true
+        default: true
+    versus.remove:
+        default: op
